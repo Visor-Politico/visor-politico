@@ -1,3 +1,11 @@
+function printObject(o) {
+    var out = '';
+    for (var p in o) {
+        out += p + ': ' + o[p] + '\n';
+    }
+    alert(out);
+}
+
 function thousandsSep (num) {
 	  num = String(num).replace(/\D/g, "");
     return num === '' ? num : Number(num).toLocaleString();
@@ -9,7 +17,7 @@ Highcharts.setOptions({
     }
 });
 
-Highcharts.chart('container', {
+Highcharts.chart('followers_display', {
         chart: {
             type: 'column',
             marginTop: 40,
@@ -82,7 +90,59 @@ Highcharts.chart('container', {
         },
         series: [{
             colorByPoint: true,
-            data: [
+            data: filterData(),
+            //type: 'scatter'
+        }],
+});
+
+
+function filterData() {
+    
+    //alert(jsonData);
+    //return [5];
+    candidates = [];
+    currentCandidate = {};
+    var idx = 0;
+    //alert(jsonData);
+    for (var candidate in jsonData) {
+        candidates.push(
+            {
+                "name": jsonData[candidate].name,
+                "y": jsonData[candidate].followers,
+                "marker": {
+                    "symbol": jsonData[candidate].picture
+                },
+                //"key": jsonData[candidate].followers,
+                //"dataLabels" : {
+                    //enabled: true,
+                    //useHTML: true,
+                    //formatter: function funcionsita() { alert(printObject(this))},
+                    /*"formatter": function  () {
+                        text = '<div><img src="'+jsonData[candidate].picture+'" height="50" width="50" class="img-candidato-grafica'+idx+'" alt=""/> </div>';
+                        return text
+                    },*/
+                //},
+            }
+        )
+        //alert(candidate)
+        //currentCandidate.name = jsonData[candidate].name;
+        //alert(currentCandidate.name);
+        //alert(jsonData.candidate.name);
+        //currentCandidate.y = jsonData[candidate].followers;
+        /*currentCandidate.dataLabels = {
+            enabled: true,
+            useHTML: true,
+            formatter: function() {
+                return '<div><img src="/img/candidatos/'+jsonData.candidate.name+'.jpg height="50" width="50" class="img-candidato-grafica'+idx+'" alt=""/> </div>';
+            },
+        }*/
+        idx++;
+        //candidates.push(currentCandidate);
+    }
+    return candidates
+}
+/*
+    return [
                                     {
                         name: 'Ricardo Anaya Cortés',
                         y: RicardoY,
@@ -151,5 +211,5 @@ Highcharts.chart('container', {
             ]
 
         }]
-
-});
+    }
+*/

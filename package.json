@@ -1,0 +1,14 @@
+{
+  "name": "visor-politico",
+  "version": "1.0.0",
+  "description": "Aplicacion para ver información pública de los representantes gubernamentales de los municipios del estado de sonora.",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Francisco Enrique Córdova González",
+  "license": "ISC"
+}

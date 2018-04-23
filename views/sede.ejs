@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-
 
     <div id="followers_bar_chart" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
     <div id="followers_line_chart" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
@@ -19,6 +15,9 @@
 
     <script>
      const jsonData =<%-JSON.stringify(json)%>
+     const Words = <%-JSON.stringify(keyWords)%>
+     const SeguidoresSemanales = <%-JSON.stringify(followers_per_week)%>
+
     </script>
 
     <script src="../js/charts/followers_bar_chart.js"></script>

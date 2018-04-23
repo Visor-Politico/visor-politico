@@ -12,7 +12,7 @@ Highcharts.setOptions({
     }
 });
 
-Highcharts.chart('followers_display', {
+Highcharts.chart('followers_bar_chart', {
     chart: {
             type: 'column',
             marginTop: 40,
@@ -66,10 +66,11 @@ Highcharts.chart('followers_display', {
         },
         headerFormat: '<span style="font-size:11px; color:{point.color}"><b>{point.name}</b></span><br>',
         pointFormatter: function() {
-            if(this.index == 4 || this.index == 5) {
-                return '<span style="font-size:11px; color:#454545">'+this.name+': </span> <br> <b>'+thousandsSep(this.y)+'</b> seguidores <br/>';
+            var tw = "";
+            if (!jsonData[this.name].twitter) {
+                tw = "(Sin Twitter)";
             }
-            return '<span style="font-size:11px; color:'+this.color+'">'+this.name+': </span> <br> <b>'+thousandsSep(this.y)+'</b> seguidores <br/>'; },
+            return '<span style="font-size:11px; color:'+this.color+'">'+this.name+','+ jsonData[this.name].actor_politico+': </span> <br> <b>'+thousandsSep(this.y)+'</b> seguidores '+tw+'<br/>'; },
         borderRadius: 5,
         hideDelay: 0
     },
@@ -84,7 +85,7 @@ function filterData() {
     for (var candidate in jsonData) {
         _formatter.push(jsonData[candidate].picture);
         candidates.push({
-            "name": jsonData[candidate].name,
+            "name": candidate,
             "y": jsonData[candidate].followers,
             "dataLabels" : {
                 enabled: true,

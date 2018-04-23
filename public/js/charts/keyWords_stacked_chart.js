@@ -1,4 +1,4 @@
-Highcharts.chart('keyWords', {
+Highcharts.chart('keyWords_stacked_chart', {
     chart: {
         type: 'column'
     },

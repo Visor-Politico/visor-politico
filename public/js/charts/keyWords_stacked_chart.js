@@ -6,7 +6,7 @@ Highcharts.chart('keyWords_stacked_chart', {
         text: 'Palabras clave'
     },
     xAxis: {
-        categories: ['Seguridad', 'Educación', 'Trabajo', 'Corrupción', 'Oportunidades']
+        categories: Words["palabras_clave"]
     },
     yAxis: {
         min: 0,
@@ -23,14 +23,20 @@ Highcharts.chart('keyWords_stacked_chart', {
             stacking: 'porcentaje'
         }
     },
-    series: [{
-        name: 'Ricardo',
-        data: [5, 3, 9, 7, 2]
-    }, {
-        name: 'Manuel',
-        data: [2, 2, 3, 2, 1]
-    }, {
-        name: 'Huguez',
-        data: [3, 4, 4, 2, 5]
-    }]
+    series: getData()
 });
+
+function getData() {
+
+
+    data = [];
+
+    for (var candidato in Words["candidatos_palabras"]) {
+        data.push({
+            "name": candidato,
+            "data": Words["candidatos_palabras"][candidato]
+        });
+    }
+
+    return data;
+}

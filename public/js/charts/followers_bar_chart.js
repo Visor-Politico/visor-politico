@@ -17,7 +17,7 @@ Highcharts.chart('followers_bar_chart', {
             type: 'column',
             marginTop: 40,
             borderColor: '#3b5998',
-            borderWidth: 1
+            borderWidth: 0
         },
     title: {
             text: ''
@@ -27,7 +27,7 @@ Highcharts.chart('followers_bar_chart', {
     },
     yAxis: {
             title: {
-                text: 'Seguidores'
+                text: ' '
             },
             labels: {
                 format: '{value:,f}'

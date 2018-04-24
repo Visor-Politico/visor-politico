@@ -3,7 +3,7 @@ Highcharts.chart('tweets_line_chart', {
         type: 'spline'
     },
     title: {
-        text: 'Tweets en el tiempo'
+        text: ' '
     },
     subtitle: {
         text: 'candidatos'

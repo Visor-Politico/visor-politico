@@ -3,7 +3,7 @@ Highcharts.chart('followers_line_chart', {
         type: 'spline'
     },
     title: {
-        text: 'Seguidores en el tiempo'
+        text: ' '
     },
     subtitle: {
         text: 'candidatos'

@@ -3,7 +3,7 @@ Highcharts.chart('keyWords_stacked_chart', {
         type: 'column'
     },
     title: {
-        text: 'Palabras clave'
+        text: ''
     },
     xAxis: {
         categories: Words["palabras_clave"]

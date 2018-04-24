@@ -1,9 +1,9 @@
-Highcharts.chart('followers_line_chart', {
+Highcharts.chart('tweets_line_chart', {
     chart: {
         type: 'spline'
     },
     title: {
-        text: 'Seguidores en el tiempo'
+        text: 'Tweets en el tiempo'
     },
     subtitle: {
         text: 'candidatos'
@@ -33,13 +33,13 @@ Highcharts.chart('followers_line_chart', {
             marker: {
                 enabled: false
             },
-            pointInterval: 3600000, // one hour
+            //pointInterval: 3600000, // one hour
             //pointStart: Date.UTC(2018, 4, 20, 0, 0, 0)
         }
     },
     yAxis: {
         title: {
-            text: 'Seguidores'
+            text: 'Tweets'
         },
        
     },
@@ -57,7 +57,7 @@ function validateData() {
     for (var candidate in DatosSemanales) {
         candidates.push({
             name: candidate,
-            data: DatosSemanales[candidate]["seguidores"]
+            data: DatosSemanales[candidate]["tweets"]
         });
     }
 

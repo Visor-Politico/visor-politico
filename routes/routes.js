@@ -16,7 +16,7 @@ module.exports = function (app){
         }
 
         var keyWords = JSON.parse(fs.readFileSync(__dirname + '/../public/json/twitter-candidatos-palabras-clave.json', 'utf8'));
-        var followers_per_week = JSON.parse(fs.readFileSync(__dirname + '/../public/json/twitter-candidatos-seguidores-semanales.json', 'utf8'));
+        var followers_per_week = JSON.parse(fs.readFileSync(__dirname + '/../public/json/twitter-candidatos-datos-semanales.json', 'utf8'));
 
         var cleared = {};
         var seguidores_semanales = {};

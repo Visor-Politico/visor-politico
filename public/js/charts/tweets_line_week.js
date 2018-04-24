@@ -1,4 +1,4 @@
-Highcharts.chart('followers_line_chart', {
+Highcharts.chart('tweets_line_week_chart', {
     chart: {
         type: 'spline'
     },
@@ -57,7 +57,7 @@ function validateData() {
     for (var candidate in DatosSemanales) {
         candidates.push({
             name: candidate,
-            data: DatosSemanales[candidate]["seguidores"]
+            data: DatosSemanales[candidate]["tweets_semana"]
         });
     }
 

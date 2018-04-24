@@ -1,4 +1,4 @@
-Highcharts.chart('followers_line_chart', {
+Highcharts.chart('tweets_line_week_chart', {
     chart: {
         type: 'spline'
     },

@@ -6,7 +6,7 @@ Highcharts.chart('keyWords_stacked_chart', {
         text: ''
     },
     xAxis: {
-        categories: Words["palabras_clave"]
+        categories: Words
     },
     yAxis: {
         min: 0,
@@ -30,11 +30,11 @@ function getData() {
 
 
     data = [];
-
-    for (var candidato in Words["candidatos_palabras"]) {
+  
+    for (var candidato in jsonData) {
         data.push({
             "name": candidato,
-            "data": Words["candidatos_palabras"][candidato]
+            "data": jsonData[candidato]["palabras_clave"][0]
         });
     }
 

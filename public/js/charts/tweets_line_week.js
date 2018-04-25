@@ -54,10 +54,10 @@ Highcharts.chart('tweets_line_week_chart', {
 function validateData() {
     candidates = [];
     
-    for (var candidate in DatosSemanales) {
+    for (var candidate in jsonData) {
         candidates.push({
             name: candidate,
-            data: DatosSemanales[candidate]["tweets_semana"]
+            data: jsonData[candidate]["tweets_semana"]
         });
     }
 

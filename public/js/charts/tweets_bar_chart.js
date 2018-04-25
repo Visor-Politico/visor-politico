@@ -83,10 +83,10 @@ Highcharts.chart('tweets_bar_chart', {
 function filterData() {
     candidates = [];
     for (var candidate in jsonData) {
-        _formatter.push(jsonData[candidate].picture);
+        _formatter.push(jsonData[candidate]["data"].picture);
         candidates.push({
             "name": candidate,
-            "y": jsonData[candidate].tweets,
+            "y": jsonData[candidate]["data"].tweets,
             "dataLabels" : {
                 enabled: true,
                 useHTML: true,

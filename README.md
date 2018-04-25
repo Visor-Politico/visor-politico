@@ -1,4 +1,4 @@
-# visor-politico
+# Visor Político Unison
 
 Visor Político UNISON nace con la idea de crear una plataforma que permita a la
 sociedad medir el impacto de los mensajes enviados por los aspirantes a las

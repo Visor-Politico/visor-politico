@@ -70,7 +70,7 @@ Highcharts.chart('tweets_bar_chart', {
             if (!jsonData[this.name]["data"].twitter) {
                 tw = "(Sin Twitter)";
             }
-            return '<span style="font-size:11px; color:'+this.color+'">'+this.name+','+ jsonData[this.name].actor_politico+': </span> <br> <b>'+thousandsSep(this.y)+'</b> tweets '+tw+'<br/>'; },
+            return '<span style="font-size:11px; color:'+this.color+'">'+this.name+','+ jsonData[this.name]["data"].actor_politico+': </span> <br> <b>'+thousandsSep(this.y)+'</b> tweets '+tw+'<br/>'; },
         borderRadius: 5,
         hideDelay: 0
     },

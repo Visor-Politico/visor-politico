@@ -3,7 +3,7 @@ Highcharts.chart('tweets_line_week_chart', {
         type: 'spline'
     },
     title: {
-        text: 'Seguidores en el tiempo'
+        text: ''
     },
     subtitle: {
         text: 'candidatos'
@@ -64,3 +64,4 @@ function validateData() {
     return candidates;
     
 }
+

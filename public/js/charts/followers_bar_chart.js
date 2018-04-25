@@ -67,7 +67,7 @@ Highcharts.chart('followers_bar_chart', {
         headerFormat: '<span style="font-size:11px; color:{point.color}"><b>{point.name}</b></span><br>',
         pointFormatter: function() {
             var tw = "";
-            if (!jsonData[this.name].twitter) {
+            if (!jsonData[this.name]["data"].twitter) {
                 tw = "(Sin Twitter)";
             }
             return '<span style="font-size:11px; color:'+this.color+'">'+this.name+','+ jsonData[this.name].actor_politico+': </span> <br> <b>'+thousandsSep(this.y)+'</b> seguidores '+tw+'<br/>'; },

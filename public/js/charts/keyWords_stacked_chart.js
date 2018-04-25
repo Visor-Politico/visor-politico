@@ -1,3 +1,7 @@
+String.prototype.capitalize = function() {
+    return this.toLowerCase().replace( /\b./g, function(a){ return a.toUpperCase(); } );
+}
+
 Highcharts.chart('keyWords_stacked_chart', {
     chart: {
         type: 'column'
@@ -33,7 +37,7 @@ function getData() {
 
     for (var candidato in Words["candidatos_palabras"]) {
         data.push({
-            "name": candidato,
+            "name": candidato.capitalize(),
             "data": Words["candidatos_palabras"][candidato]
         });
     }

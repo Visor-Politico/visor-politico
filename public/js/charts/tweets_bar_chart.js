@@ -12,6 +12,10 @@ Highcharts.setOptions({
     }
 });
 
+String.prototype.capitalize = function() {
+    return this.toLowerCase().replace( /\b./g, function(a){ return a.toUpperCase(); } );
+}
+
 Highcharts.chart('tweets_bar_chart', {
     chart: {
             type: 'column',
@@ -85,7 +89,7 @@ function filterData() {
     for (var candidate in jsonData) {
         _formatter.push(jsonData[candidate].picture);
         candidates.push({
-            "name": candidate,
+            "name": candidate.capitalize(),
             "y": jsonData[candidate].tweets,
             "dataLabels" : {
                 enabled: true,

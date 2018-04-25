@@ -64,3 +64,4 @@ function validateData() {
     return candidates;
     
 }
+

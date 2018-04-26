@@ -7,5 +7,5 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 require('./routes/routes.js')(app);
 
-
-app.listen(80, () => console.log('Example app listening on port 3000!'))
+const port = 80;
+app.listen(port, () => console.log('Example app listening on port '+port+'!'));

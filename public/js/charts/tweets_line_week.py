@@ -1,3 +1,7 @@
+String.prototype.capitalize = function() {
+    return this.toLowerCase().replace( /\b./g, function(a){ return a.toUpperCase(); } );
+}
+
 Highcharts.chart('tweets_line_week_chart', {
     chart: {
         type: 'spline'

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Scrolling Nav - Start Bootstrap Template</title>
+    <title>Visor político Unison</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #ffff33 ">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #fec333 ">
       <div class="container">
         <a class= "js-scroll-trigger" href="/">
           <img src="../img/index/visorlogo.png" style="height: 50px;">
@@ -30,10 +30,34 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/#page-top" style="color: #253876">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/#about" style="color: #253876">Acerca</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/#resSo" style="color: #253876">Responsabilidad social</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/#info"  style="color: #253876">Información</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/#integrantes"  style="color: #253876">Integrantes</a>
+            </li>
+          </ul>
+        </div>
         
       </div>
     </nav>
     <div style="height: 100px;"></div>
+
+    <div type="row" style="margin-bottom: 50px;"> 
+      <h2 class="text-center" style="color: grey">Actividad en Twitter de los candidatos a presidentes municipales en Sonora</h2>
+    </div>
 
     <div class="card" style="margin-left: 100px; margin-right: 100px; border-width: 2px">
       <div class="card-header">
@@ -106,10 +130,12 @@
         Frecuencia de palabras de los tweets realizados la semana pasada.
       </div>
     </div>
+    
+
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5" style="background-color: #253876">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Unison 2018</p>
       </div>
       <!-- /.container -->
     </footer>
@@ -130,13 +156,13 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
+
     <script>
      const jsonData =<%-JSON.stringify(data)%>
     </script>
     <script>
      const Words = <%-JSON.stringify(dataWords)%>
     </script>
-
 
     <script src="../js/charts/followers_bar_chart.js"></script>
     <script src="../js/charts/followers_line_chart.js"></script>

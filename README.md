@@ -10,8 +10,8 @@ El objetivo principal de Visor Político Unison es ofrecer una herramienta de
 acercamiento entre la ciudadanía y los aspirantes a una elección popular, así como
 contribuir al fomento de la participación ciudadana.
 Con este tipo de plataforma, Visor Político Unison se suma al esfuerzo de otras
-Universidades tales como el Observatorio Electoral de la UNAM 1 , Universidad de
-Guadalajara 2 , entre otras.
+Universidades tales como el Observatorio Electoral de la UNAM, Universidad de
+Guadalajara, entre otras.
 En Visor Político Unison, los ciudadanos podrán seguir las actividades diarias, que a
 través de Twitter los aspirantes a las alcaldías municipales en Sonora llevan a cabo.
 Por ejemplo, los usuarios de la plataforma podrán obtener información relacionada

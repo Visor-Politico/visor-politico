@@ -13,6 +13,6 @@ module.exports = function (app){
                 sede[iter] = obj[iter];
             }
         }
-		    res.render('sede',{data:sede,dataWords:["esperanza","educacion","salud","trabajo","seguridad"]});
+		    res.render('sede',{data:sede,dataWords:["esperanza","educacion","salud","trabajo","seguridad"],sede:req.params.sede});
 	  });
 }

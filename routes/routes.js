@@ -13,6 +13,11 @@ module.exports = function (app){
                 sede[iter] = obj[iter];
             }
         }
-		    res.render('sede',{data:sede,dataWords:["esperanza","educacion","salud","trabajo","seguridad"],sede:req.params.sede});
+		    res.render('sede',{data:sede,dataWords:["esperanza","educacion","salud","trabajo","seguridad"],sede:capitalizeFirstLetter(req.params.sede)});
 	  });
+}
+
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }

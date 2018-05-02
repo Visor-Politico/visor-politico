@@ -16,10 +16,7 @@ Highcharts.chart('followers_line_chart', {
         },*/
     xAxis: {
         type: 'datetime',
-        dateTimeLabelFormats: { // don't display the dummy year
-            month: '%e. %b',
-            year: '%b'
-        },
+        
         min: Date.UTC(2018,3,28)
     },
     
@@ -34,7 +31,7 @@ Highcharts.chart('followers_line_chart', {
             marker: {
                 enabled: false
             },
-            pointInterval: 3600000, // one hour
+            //pointInterval: 3600000, // one hour
             //pointStart: Date.UTC(2018, 4, 20, 0, 0, 0)
         }
     },
@@ -45,8 +42,8 @@ Highcharts.chart('followers_line_chart', {
        
     },
     tooltip: {
-        crosshairs: true,
-        shared: true
+        crosshairs: false,
+        //shared: true
     },
     
     series: validateData()
@@ -57,7 +54,7 @@ function validateData() {
     
     for (var candidate in jsonData) {
         candidates.push({
-            name: candidate,
+            name: candidate.capitalize() +'<br>'+ jsonData[candidate]["data"]["twitter"],
             data: jsonData[candidate]["seguidores"]
         });
     }

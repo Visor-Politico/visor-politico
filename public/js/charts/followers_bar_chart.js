@@ -15,7 +15,7 @@ Highcharts.setOptions({
 Highcharts.chart('followers_bar_chart', {
     chart: {
             type: 'column',
-            marginTop: 40,
+            marginTop: 60,
             borderColor: '#3b5998',
             borderWidth: 0
         },
@@ -23,7 +23,11 @@ Highcharts.chart('followers_bar_chart', {
             text: ''
         },
     xAxis: {
-        type: 'category'
+        type: 'category',
+        labels: {
+            enabled: true,
+            formatter: function() { return this.value.capitalize() + '<br>' + jsonData[this.value]["data"]["twitter"]; }
+        }
     },
     yAxis: {
             title: {
@@ -58,7 +62,7 @@ Highcharts.chart('followers_bar_chart', {
             if (point.plotY < 54){
                 alturaImagen = 0;
             }
-            tooltipY = point.plotY - (alturaImagen + 20);
+            tooltipY = point.plotY - (alturaImagen);
             return {
                 x: tooltipX,
                 y: tooltipY
@@ -70,7 +74,7 @@ Highcharts.chart('followers_bar_chart', {
             if (!jsonData[this.name]["data"].twitter) {
                 tw = "(Sin Twitter)";
             }
-            return '<span style="font-size:11px; color:'+this.color+'">'+this.name+','+ jsonData[this.name]["data"].actor_politico+': </span> <br> <b>'+thousandsSep(this.y)+'</b> seguidores '+tw+'<br/>'; },
+            return '<span style="font-size:11px; color:'+this.color+'">'+this.name.capitalize()+','+ jsonData[this.name]["data"].actor_politico+': </span> <br> <b>'+thousandsSep(this.y)+'</b> seguidores '+tw+'<br/>'; },
         borderRadius: 5,
         hideDelay: 0
     },

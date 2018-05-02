@@ -33,7 +33,7 @@ function getData() {
   
     for (var candidato in jsonData) {
         data.push({
-            "name": candidato.capitalize(),
+            "name": candidato,
             "data": jsonData[candidato]["palabras_clave"][0]
         });
     }

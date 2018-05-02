@@ -42,8 +42,9 @@ Highcharts.chart('tweets_line_week_chart', {
        
     },
     tooltip: {
-        crosshairs: true,
-        shared: true
+        crosshairs: true
+        //shared: true
+        
     },
     
     series: validateData()
@@ -54,7 +55,7 @@ function validateData() {
 
     for (var candidate in jsonData) {
         candidates.push({
-            name: candidate,
+            name: candidate.capitalize() +'<br>'+ jsonData[candidate]["data"]["twitter"],
             data: jsonData[candidate]["tweets_semana"]
         });
     }

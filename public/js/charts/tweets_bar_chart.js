@@ -15,7 +15,7 @@ Highcharts.setOptions({
 Highcharts.chart('tweets_bar_chart', {
     chart: {
             type: 'column',
-            marginTop: 40,
+            marginTop: 60,
             borderColor: '#3b5998',
             borderWidth: 0
         },
@@ -23,7 +23,11 @@ Highcharts.chart('tweets_bar_chart', {
             text: ''
         },
     xAxis: {
-        type: 'category'
+        type: 'category',
+        labels: {
+            enabled: true,
+            formatter: function() { return this.value.capitalize() + '<br>' + jsonData[this.value]["data"]["twitter"]; }
+        }
     },
     yAxis: {
             title: {
@@ -58,7 +62,7 @@ Highcharts.chart('tweets_bar_chart', {
             if (point.plotY < 54){
                 alturaImagen = 0;
             }
-            tooltipY = point.plotY - (alturaImagen + 20);
+            tooltipY = point.plotY - (alturaImagen);
             return {
                 x: tooltipX,
                 y: tooltipY

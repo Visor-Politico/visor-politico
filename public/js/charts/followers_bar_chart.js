@@ -85,7 +85,7 @@ function filterData() {
     for (var candidate in jsonData) {
         _formatter.push(jsonData[candidate]["data"].picture);
         candidates.push({
-            "name": candidate.capitalize(),
+            "name": candidate,
             "y": jsonData[candidate]["data"].followers,
             "dataLabels" : {
                 enabled: true,

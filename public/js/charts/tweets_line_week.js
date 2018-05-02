@@ -54,7 +54,7 @@ function validateData() {
 
     for (var candidate in jsonData) {
         candidates.push({
-            name: candidate.capitalize(),
+            name: candidate,
             data: jsonData[candidate]["tweets_semana"]
         });
     }

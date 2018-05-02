@@ -19,9 +19,9 @@ Highcharts.chart('tweets_line_week_chart', {
         dateTimeLabelFormats: { // don't display the dummy year
             month: '%e. %b',
             year: '%b'
-        }
+        },
+        min: Date.UTC(2018,3,28)
     },
-    
     plotOptions: {
         spline: {
             lineWidth: 4,
@@ -32,14 +32,12 @@ Highcharts.chart('tweets_line_week_chart', {
             },
             marker: {
                 enabled: false
-            },
-            pointInterval: 3600000, // one hour
-            //pointStart: Date.UTC(2018, 4, 20, 0, 0, 0)
+            }
         }
     },
     yAxis: {
         title: {
-            text: 'Seguidores'
+            text: 'Tweets'
         },
        
     },
@@ -53,15 +51,15 @@ Highcharts.chart('tweets_line_week_chart', {
 
 function validateData() {
     candidates = [];
-    
+
     for (var candidate in jsonData) {
         candidates.push({
-            name: candidate,
+            name: candidate.capitalize(),
             data: jsonData[candidate]["tweets_semana"]
         });
     }
 
     return candidates;
-    
+
 }
 

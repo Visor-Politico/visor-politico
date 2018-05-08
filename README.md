@@ -29,7 +29,7 @@ semana por cada uno de los candidatos.
 
 Orden de aparición en las gráficas:
 
-HERMOSILLO
+HERMOSILLO:
 Myrna Rea Sánchez (Por Sonora al frente)
 Ernesto de Lucas Hopkins (Todos por Sonora)
 Celida Teresa López (Juntos Haremos Historia)
@@ -37,7 +37,7 @@ Carlos Alberto León (Movimiento Ciudadano)
 José Guadalupe Curiel (Movimiento Alternativo Sonorense)
 Norberto Barraza (Norberto Barraza)
 
-CAJEME
+CAJEME:
 Rafael Delgadillo Barbosa (Por Sonora al frente)
 Emeterio Ochoa Bazua (Todos por Sonora)
 Sergio Pablo Mariscal Alvarado (Juntos Haremos Historia)
@@ -45,21 +45,21 @@ Gutavo Ignacio Almada Bórquez (Movimiento Ciudadano)
 Miguel Ángel Salomon Montiel (Movimiento Alternativo Sonorense)
 Jose Rodrigo Robinson Bours (Jose Rodrigo Robinson Bours)
 
-NAVOJOA
+NAVOJOA:
 Martín Ruy Sánchez Toledo (Por Sonora al frente)
 Jorge Luis Marquez Cazares (Todos por Sonora)
 María del Rosario Quintero (Juntos Haremos Historia)
 Rogelio Alfredo Álvarez Cevallos (Movimiento Ciudadano)
 Fabiola Santoyo Rojas (Movimiento Alternativo Sonorense)
 
-NOGALES
+NOGALES:
 David Cuauhtemoc Galindo (Por Sonora al frente)
 Jorge Octavio Freig (Todos por Sonora)
 Jesús Antonio Pujol (Juntos Haremos Historia)
 Marco Antonio Valenzuela (Movimiento Ciudadano)
 Francisco Javier Mendivil (Movimiento Alternativo Sonorense)
 
-GUAYMAS
+GUAYMAS:
 Lorenzo de Cima Dworak (Por Sonora al frente)
 Luis Alejandro Bárcenas Salido (PRI-NA-PVEM)
 Sara Valle Dessens (Juntos Haremos Historia)
@@ -67,7 +67,7 @@ Sergio Carlos García Rascón (Movimiento Ciudadano)
 Porfirio Villa Brito (Movimiento Alternativo Sonorense)
 Ernesto Uribe Corona (Ernesto Uribe Corona)
 
-SAN LUIS RC
+SAN LUIS RC:
 José Everardo López Córdova (Por Sonora al frente)
 Héctor Virgilio Layva (Todos por Sonora)
 Santos González Yescas (Juntos Haremos Historia)

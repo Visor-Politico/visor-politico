@@ -56,22 +56,6 @@
     <div style="height: 100px;"></div>
 
     <div type="row" style="margin-bottom: 50px;">
-      <h2 class="text-center" style="color: grey">Actividad en Facebook de los candidatos a presidente municipal de <%- sede %> </h2>
-    </div>
-
-    <div class="card" style="width: 90%; margin-left: 5%; border-width: 2px">
-      <div class="card-header">
-        Seguidores
-      </div>
-      <div class="card-body">
-        <div id="followers_bar_chart_face" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
-      </div>
-      <div class="card-footer text-muted">
-        Número total de seguidores de cada candidato en Facebook.
-      </div>
-    </div>
-    <br/><br/>
-    <div type="row" style="margin-bottom: 50px;">
       <h2 class="text-center" style="color: grey">Actividad en Twitter de los candidatos a presidente municipal de <%- sede %> </h2>
     </div>
 
@@ -147,7 +131,26 @@
       </div>
     </div>
 
+    <% if ( ['Nogales','Sanluisrc'].indexOf(sede) == -1) { %>      
+    <div style="height: 100px;"></div>
 
+    <div type="row" style="margin-bottom: 50px;">
+      <h2 class="text-center" style="color: grey">Actividad en Facebook de los candidatos a presidente municipal de <%- sede %> </h2>
+    </div>
+
+    <div class="card" style="width: 90%; margin-left: 5%; border-width: 2px">
+      <div class="card-header">
+        Seguidores
+      </div>
+      <div class="card-body">
+        <div id="followers_bar_chart_face" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+      </div>
+      <div class="card-footer text-muted">
+        Número total de seguidores de cada candidato en Facebook.
+      </div>
+    </div>
+    <br/><br/>
+    <% } %>
     <!-- Footer -->
     <footer class="py-5" style="background-color: #253876">
       <div class="container">
@@ -187,11 +190,11 @@
     </script>
 
     <script>
-     Highcharts.setOptions({
+    	 Highcharts.setOptions({
        global: {
          useUTC: false
        }
-     });
+     });	
      String.prototype.capitalize = function() {
        return this.toLowerCase().replace( /\b./g, function(a){ return a.toUpperCase(); } );
      }

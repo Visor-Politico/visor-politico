@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Visor político Unison</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <style>
+        html {z-index:0;position: relative;}
+        image {
+            position: relative;
+            z-index: auto;
+            width: 100%; /* for IE 6 */
+        }
+
+    </style>
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #fec333 ">
+    <div class="container">
+        <a class= "js-scroll-trigger" href="/">
+            <img src="../img/index/visorlogo.png" style="height: 50px;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/#page-top" style="color: #253876">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/#about" style="color: #253876">Acerca</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/#resSo" style="color: #253876">Responsabilidad social</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/#info"  style="color: #253876">Información</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/#integrantes"  style="color: #253876">Integrantes</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div style="height: 100px;"></div>
+
+<div type="row" style="margin-bottom: 50px;">
+    <h2 class="text-center" style="color: grey">Actividad en Twitter de las fórmulas del senado en Sonora.</h2>
+</div>
+
+<div class="card" style="width: 90%; margin-left: 5%; border-width: 2px">
+    <div class="card-header">
+        Seguidores
+    </div>
+    <div class="card-body">
+        <div id="followers_bar_chart" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="card-footer text-muted">
+        Número total de seguidores de cada candidato en Twitter.
+    </div>
+</div>
+
+<div class="card" style="width: 90%; margin-left: 5%; margin-top: 50px; border-width: 2px">
+    <div class="card-header">
+        Tweets
+    </div>
+    <div class="card-body">
+        <div id="tweets_bar_chart" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="card-footer text-muted">
+        Número total de mensajes enviados en twitter por cada candidato.
+    </div>
+</div>
+
+<div class="card" style="width: 90%; margin-left: 5%; margin-top: 50px; border-width: 2px; margin-bottom: 50px" >
+    <div class="card-header">
+        Frecuencia de palabras
+    </div>
+    <div class="card-body">
+        <div id="keyWords_stacked_chart" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="card-footer text-muted">
+        Frecuencia de palabras de los tweets realizados la semana pasada.
+    </div>
+</div>
+
+<div class="card" style="width: 90%; margin-left: 5%; margin-top: 50px; border-width: 2px">
+    <div class="card-header">
+        Tweets por semana
+    </div>
+    <div class="card-body">
+        <div id="tweets_line_week_chart" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="card-footer text-muted">
+        Tweets realizados la semana pasada.
+    </div>
+</div>
+
+
+<div class="card" style="width: 90%; margin-left: 5%; margin-top: 50px; border-width: 2px">
+    <div class="card-header">
+        Seguidores en el tiempo
+    </div>
+    <div class="card-body">
+        <div id="followers_line_chart" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="card-footer text-muted">
+        Número total de seguidores en el tiempo (por día)
+    </div>
+</div>
+
+<div class="card" style="width: 90%; margin-left: 5%; margin-top: 50px; border-width: 2px">
+    <div class="card-header">
+        Tweets en el tiempo
+    </div>
+    <div class="card-body">
+        <div id="tweets_line_chart" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="card-footer text-muted">
+        Número total de tweets por candidato en el tiempo.
+    </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<footer class="py-5" style="background-color: #253876">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Unison 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom JavaScript for this theme -->
+<script src="../js/scrolling-nav.js"></script>
+
+<!-- VISTA SEDE SCRIPTS -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="http://code.highcharts.com/stock/highstock.js"></script>
+
+<script>
+	const jsonData =<%-JSON.stringify(data)%>
+</script>
+
+<script>
+	const Words = <%-JSON.stringify(dataWords)%>
+</script>
+
+<script>
+	Highcharts.setOptions({
+		global: {
+			useUTC: false
+		}
+	});
+	String.prototype.capitalize = function() {
+		return this ;
+	}
+</script>
+
+<script src="../js/charts/senado_seguidores_twitter.js"></script>
+<script src="../js/charts/senado_seguidores_en_el_tiempo.js"></script>
+<script src="../js/charts/senado_frecuencia_de_palabras.js"></script>
+<script src="../js/charts/senado_tweets.js"></script>
+<script src="../js/charts/tweets_line_total.js"></script>
+<script src="../js/charts/tweets_por_semana.js"></script>
+
+</body>
+
+</html>

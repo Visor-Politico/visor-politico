@@ -1,28 +1,28 @@
 function thousandsSep (num) {
-	  num = String(num).replace(/\D/g, "");
-    return num === '' ? num : Number(num).toLocaleString();
+	num = String(num).replace(/\D/g, "");
+	return num === '' ? num : Number(num).toLocaleString();
 }
 
 var _formatter = [];
 
 
 Highcharts.setOptions({
-    lang: {
-        thousandsSep: ','
-    }
+	lang: {
+		thousandsSep: ','
+	}
 });
 
 Highcharts.chart('followers_bar_chart', {
-    chart: {
-            type: 'column',
-            marginTop: 60,
-            borderColor: '#3b5998',
-            borderWidth: 0
-        },
-    title: {
-            text: ''
-        },
-    xAxis: {
+	chart: {
+		type: 'column',
+		marginTop: 60,
+		borderColor: '#3b5998',
+		borderWidth: 0
+	},
+	title: {
+		text: ''
+	            },
+		            xAxis: {
         type: 'category',
         labels: {
             enabled: true,

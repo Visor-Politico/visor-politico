@@ -75,7 +75,7 @@ function filterData() {
 
 	candidates = [];
 	idx = 0;
-	for (var candidate in jsonData) {
+	for (let candidate in jsonData) {
 		_formatter.push(jsonData[candidate]["data"].picture);
 		candidates.push({
 			"name": candidate,
@@ -93,39 +93,19 @@ function filterData() {
 	}
 
 
+	order = ['Antonio Astiazarán','Leticia Cuesta','Manuel Acosta','Sylvana Beltrones','Alfonso Durazo','Lilly Téllez'];
+
+
+	candidates.sort(function(a, b){
+		return order.indexOf(a.name) - order.indexOf(b.name);
+	});
+
 	return [{
-		name: 'Subset A',
+		name: 'Hombres',
 		data: [candidates[0], candidates[2], candidates[4]]
 	}, {
-		name: 'Subset B',
+		name: 'Mujeres',
 		data: [candidates[1], candidates[3], candidates[5]]
 	}]
 
-	/*candidates = [];
-	for (var candidate in jsonData) {
-		_formatter.push(jsonData[candidate]["data"].picture);
-
-		actor_politico = jsonData[candidate]["data"]["actor_politico"];
-
-		data = [0,jsonData[candidate]["data"].followers,0];
-
-		if ( actor_politico === "Por M\u00e9xico al frente") {
-			data = [jsonData[candidate]["data"].followers,0,0];
-		} else if (actor_politico === "Juntos haremos historia") {
-			data = [0,0,jsonData[candidate]["data"].followers];
-		}
-
-		candidates.push({
-			"name": candidate,
-			"data": data,
-			"dataLabels" : {
-				enabled: true,
-				useHTML: true,
-				formatter: function () {
-					return '<div><img src="'+_formatter[this.colorIndex]+' " height="50" width="50" class="img-candidato-grafica '+this.colorIndex+'" alt=""/> </div>';
-				}
-			}
-		});
-	}
-	return candidates;*/
 }

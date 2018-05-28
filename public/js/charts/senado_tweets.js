@@ -86,6 +86,12 @@ function filterData() {
 		idx++;
 	}
 
+	order = ['Antonio Astiazarán','Leticia Cuesta','Manuel Acosta','Sylvana Beltrones','Alfonso Durazo','Lilly Téllez'];
+
+
+	candidates.sort(function(a, b){
+		return order.indexOf(a.name) - order.indexOf(b.name);
+	});
 
 	return [{
 		name: 'hombre',

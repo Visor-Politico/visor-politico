@@ -52,6 +52,16 @@ function sum_arrays(arr1,arr2) {
 	return arr3;
 }
 
+function get_color_by_key(actor_politico) {
+	if (actor_politico === 'Por M\u00e9xico al frente') {
+		return 'red';
+	} else if (actor_politico === 'Todos por M\u00e9xico') {
+		return 'blue';
+	}
+	return 'brown';
+}
+
+
 function getData() {
 
 
@@ -73,9 +83,11 @@ function getData() {
 	}
 
 	for (let ap in names) {
+		color = get_color_by_key(ap);
 		data.push({
 			"name": ap,
-			"data": names[ap]
+			"data": names[ap],
+			"color": color
 		})
 	}
 

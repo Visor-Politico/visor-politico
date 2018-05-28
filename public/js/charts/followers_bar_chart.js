@@ -21,8 +21,8 @@ Highcharts.chart('followers_bar_chart', {
 	},
 	title: {
 		text: ''
-	            },
-		            xAxis: {
+  },
+  xAxis: {
         type: 'category',
         labels: {
             enabled: true,

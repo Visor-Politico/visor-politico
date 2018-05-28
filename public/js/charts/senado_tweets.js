@@ -66,15 +66,26 @@ Highcharts.chart('tweets_bar_chart', {
 	series: filterData()
 });
 
+function get_color_by_key(actor_politico) {
+	if (actor_politico === 'Por M\u00e9xico al frente') {
+		return 'red';
+	} else if (actor_politico === 'Todos por M\u00e9xico') {
+		return 'blue';
+	}
+	return 'brown';
+}
+
 function filterData() {
 	candidates = [];
 	idx = 0;
 	for (let candidate in jsonData) {
 		_formatter.push(jsonData[candidate]["data"].picture);
+		color = get_color_by_key(jsonData[candidate]["data"]["actor_politico"]);
 		candidates.push({
 			"name": candidate,
 			"y": jsonData[candidate]["data"].tweets,
 			"colorIndex": idx,
+			"color": color,
 			"dataLabels": {
 				enabled: true,
 				useHTML: true,
@@ -86,7 +97,7 @@ function filterData() {
 		idx++;
 	}
 
-	order = ['Antonio Astiazarán','Leticia Cuesta','Manuel Acosta','Sylvana Beltrones','Alfonso Durazo','Lilly Téllez'];
+	order = ['Antonio Astiazaran','Leticia Cuesta','Manuel Acosta','Sylvana Beltrones','Alfonso Durazo','Lilly Tellez'];
 
 
 	candidates.sort(function(a, b){

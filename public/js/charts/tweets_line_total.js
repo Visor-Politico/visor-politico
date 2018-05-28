@@ -20,7 +20,7 @@ Highcharts.chart('tweets_line_chart', {
             month: '%e. %b',
             year: '%b'
         },
-        min: Date.UTC(2018,3,28)
+	    min: Date.UTC(2018,4,19)
     },
     
     plotOptions: {

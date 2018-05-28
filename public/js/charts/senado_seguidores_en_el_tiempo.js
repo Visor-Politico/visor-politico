@@ -18,7 +18,7 @@ Highcharts.chart('followers_line_chart', {
 	xAxis: {
 		type: 'datetime',
 
-		min: Date.UTC(2018,3,28)
+		min: Date.UTC(2018,4,19)
 	},
 
 	plotOptions: {
@@ -50,6 +50,27 @@ Highcharts.chart('followers_line_chart', {
 	series: validateData()
 });
 
+
+function sum_arrays_on_time(arr1,arr2) {
+	arr3 = [];
+	for (let i = 0; i < arr1.length; i++) {
+		console.log(arr1,arr2)
+		arr3.push([ arr1[i][0], arr1[i][1] + arr2[i][1] ]);
+	}
+
+	//console.log(arr3);
+	return arr3;
+}
+
+function get_color_by_key(actor_politico) {
+	if (actor_politico === 'Por M\u00e9xico al frente') {
+		return 'red';
+	} else if (actor_politico === 'Todos por M\u00e9xico') {
+		return 'blue';
+	}
+	return 'brown';
+}
+
 function validateData() {
 
 	data = [];
@@ -57,24 +78,29 @@ function validateData() {
 
 	for (let candidato in jsonData) {
 		if (names[jsonData[candidato]["data"]["actor_politico"]]) {
-			arr1 = names[jsonData[candidato]["data"]["actor_politico"]][1];
-			arr2 = jsonData[candidato]["seguidores"][1];
+			arr1 = names[jsonData[candidato]["data"]["actor_politico"]];
+			arr2 = jsonData[candidato]["seguidores"];
 
-			sum = arr1+arr2;
+			sum = sum_arrays_on_time(arr1,arr2);
 
-			names[jsonData[candidato]["data"]["actor_politico"]] = [jsonData[candidato]["seguidores"][0],sum];
+			names[jsonData[candidato]["data"]["actor_politico"]] = sum;
 
 		} else {
 			names[jsonData[candidato]["data"]["actor_politico"]] = jsonData[candidato]["seguidores"];
+			console.log("Candidato: ", candidato, "  ", names)
 		}
 	}
 
 	for (let ap in names) {
+		color = get_color_by_key(ap);
 		data.push({
 			"name": ap,
-			"data": names[ap]
+			"data": names[ap],
+			"color": color
 		})
 	}
 
 	return data;
 }
+
+

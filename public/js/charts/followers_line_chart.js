@@ -16,8 +16,8 @@ Highcharts.chart('followers_line_chart', {
         },*/
     xAxis: {
         type: 'datetime',
-        
-        min: Date.UTC(2018,3,28)
+
+	    min: Date.UTC(2018,4,19)
     },
     
     plotOptions: {
